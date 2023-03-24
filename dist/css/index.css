@@ -9,3 +9,52 @@
 html {
   font-family: "Raleway", sans-serif;
 }
+
+.container {
+  min-height: 100dvh;
+  min-width: 100vw;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url("../images/bg-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  place-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 5rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.controls {
+  background-color: hsl(228, 56%, 26%);
+  padding: 2.5rem 2rem;
+  padding-right: 10rem;
+  border-radius: 1rem;
+  border-top-right-radius: 7rem;
+}
+.controls__logo {
+  margin-bottom: 1.5rem;
+}
+.controls__buttons {
+  display: flex;
+  gap: 1rem;
+}
+.controls__button {
+  background-color: hsl(229, 57%, 11%);
+  cursor: pointer;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  border: none;
+  transition: all 0.2s;
+}
+.controls__button:hover {
+  transform: scale(1.05);
+  fill: hsl(229, 57%, 11%);
+}

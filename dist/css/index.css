@@ -58,3 +58,56 @@ html {
   transform: scale(1.05);
   fill: hsl(229, 57%, 11%);
 }
+
+.storage {
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 1rem;
+  align-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.5rem 2rem;
+  color: hsl(243, 100%, 93%);
+  grid-gap: 1rem;
+  font-size: 0.875rem;
+}
+.storage__text {
+  grid-column: 1/-1;
+}
+.storage__text span {
+  font-weight: 700;
+}
+.storage__bar {
+  height: 1rem;
+  width: 30rem;
+  background-color: hsl(229, 57%, 11%);
+  padding: 0.1rem;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  border-radius: 1rem;
+}
+.storage__progress {
+  width: 81.5%;
+  height: 100%;
+  border-radius: 1rem;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0.1rem;
+}
+.storage__progress::after {
+  content: "";
+  display: block;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 1rem;
+  background-color: hsl(243, 100%, 93%);
+  z-index: 10;
+}
+.storage__quantity {
+  grid-row: 3/4;
+  font-weight: 700;
+}
+.storage__quantity--end {
+  justify-self: end;
+}

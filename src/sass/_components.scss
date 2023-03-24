@@ -55,8 +55,60 @@
 
 .storage {
   background-color: $color-dark-blue-1;
-  width: 10rem;
-  height: 10rem;
   border-radius: $border-radius;
   align-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.5rem 2rem;
+  color: $color-pale-blue;
+  grid-gap: 1rem;
+  font-size: 0.875rem;
+
+  &__text {
+    grid-column: 1 / -1;
+
+    span {
+      font-weight: $fw-2;
+    }
+  }
+
+  &__bar {
+    height: 1rem;
+    width: 30rem;
+    background-color: $color-dark-blue-2;
+    padding: 0.1rem;
+    grid-row: 2/3;
+    grid-column: 1 / -1;
+    border-radius: $border-radius;
+  }
+
+  &__progress {
+    width: 81.5%;
+    height: 100%;
+    border-radius: $border-radius;
+    background-image: $color-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.1rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.6rem;
+      width: 0.6rem;
+      border-radius: $border-radius;
+      background-color: $color-pale-blue;
+      z-index: 10;
+    }
+  }
+
+  &__quantity {
+    grid-row: 3/4;
+    font-weight: $fw-2;
+
+    &--end {
+      justify-self: end;
+    }
+  }
 }

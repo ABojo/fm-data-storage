@@ -21,15 +21,26 @@ html {
   display: flex;
   place-items: center;
 }
+@media (max-width: 53.125em) {
+  .container {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+  }
+}
 
 .grid {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-gap: 2rem;
-  max-width: 50rem;
+  max-width: 60rem;
+  width: 90%;
   margin: 0 auto;
   height: 100%;
-  width: 100%;
+}
+@media (max-width: 53.125em) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .controls {
@@ -58,6 +69,11 @@ html {
   transform: scale(1.05);
   fill: hsl(229, 57%, 11%);
 }
+@media (max-width: 28.125em) {
+  .controls {
+    padding-right: 2rem;
+  }
+}
 
 .storage {
   background-color: hsl(228, 56%, 26%);
@@ -70,12 +86,18 @@ html {
   grid-gap: 1rem;
   font-size: 0.875rem;
   position: relative;
+  width: 100%;
 }
 .storage__text {
   grid-column: 1/2;
 }
 .storage__text span {
   font-weight: 700;
+}
+@media (max-width: 65.625em) {
+  .storage__text {
+    grid-column: 1/-1;
+  }
 }
 .storage__popup {
   background-color: white;
@@ -90,11 +112,17 @@ html {
   right: 2rem;
   top: -50%;
   transform: translateY(50%);
+  justify-content: center;
 }
 .storage__popup-quantity {
   font-size: 2.3rem;
   margin-right: 0.75rem;
   color: hsl(229, 57%, 11%);
+}
+@media (max-width: 28.125em) {
+  .storage__popup-quantity {
+    font-size: 1.9rem;
+  }
 }
 .storage__popup-text {
   text-transform: uppercase;
@@ -112,9 +140,27 @@ html {
   height: 0;
   width: 0;
 }
+@media (max-width: 65.625em) {
+  .storage__popup {
+    top: 75%;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 1rem;
+  }
+  .storage__popup::after {
+    display: none;
+  }
+}
+@media (max-width: 53.125em) {
+  .storage__popup {
+    width: 50%;
+    max-width: 15rem;
+  }
+}
 .storage__bar {
   height: 1rem;
-  width: 30rem;
+  width: 100%;
   background-color: hsl(229, 57%, 11%);
   padding: 0.1rem;
   grid-row: 2/3;
@@ -122,7 +168,6 @@ html {
   border-radius: 1rem;
 }
 .storage__progress {
-  width: 81.5%;
   height: 100%;
   border-radius: 1rem;
   background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));

@@ -5,7 +5,7 @@
   min-width: 100vw;
   background-color: $color-dark-blue-2;
   background-image: url("../images/bg-desktop.png");
-  background-size: contain;
+  background-size: 100% 50dvh;
   background-repeat: no-repeat;
   background-position: bottom;
   display: flex;
@@ -56,8 +56,7 @@
     transition: all 0.2s;
 
     &:hover {
-      transform: scale(1.05);
-      fill: $color-dark-blue-2;
+      transform: scale(1.1);
     }
   }
 
